@@ -2,43 +2,25 @@
 
 int	*ft_range(int min, int max);
 
-int		main(void)
+int	main(void)
 {
-	int min0 = 6;
-	int max0 = 6;
-
-	int min1 = -18;
-	int max1 = 34;
-
-	int min2 = 6;
-	int max2 = 7;
-
-	int min3 = 10;
-	int max3 = 2;
-
+	int *nums;
 	int i;
+	int len;
+	int start;
+	int end;
 
 	i = 0;
-	while (i < (max0 - min0))
+	start = -10;
+	end = -5;
+	len = (end - start);
+	if (start < 0 && end < 0)
+		len = ((start * - 1) - (end * - 1));
+	nums = ft_range(start, end);
+	while (i <= len)
 	{
-		printf("%d", (*ft_range(min0, max0))[i]);
+		printf("%d\n", nums[i]);
 		i++;
 	}
-	i = 0;
-	while (i < (max1 - min1))
-	{
-		printf("%d", (*ft_range(min1, max1))[i]);
-	}
-	i = 0;
-	while (i < (max2 - min2)
-	{
-		printf("%d", (*ft_range(min2, max2))[i]);
-		i++;
-	}
-	i = 0;
-	while (i < (min3 - max3))
-	{
-		printf("%d", (*ft_range(min3, max3))[i]);
-		i++;
-	}	
+	return (0);
 }

@@ -23,7 +23,7 @@ int		*ft_range(int min, int max)
 	range_arr = (int *)malloc(sizeof(int) * (max - min));
 	if (!range_arr)
 		return (0);
-	while (range_arr[increment])
+	while (increment < (max - min + 1))
 	{
 		range_arr[increment] = min + increment;
 		increment++;
