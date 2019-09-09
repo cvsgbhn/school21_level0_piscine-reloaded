@@ -15,7 +15,7 @@ int	ft_sqrt(int nb)
 	int hypothesis;
 	int check_calculation;
 
-	if (nb <= 0)
+	if (nb <= 0 || !nb)
 		return (0);
 	if (nb == 1)
 		return (1);
