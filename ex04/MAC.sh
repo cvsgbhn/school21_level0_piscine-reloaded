@@ -1,2 +1,2 @@
 #!/bin/sh
-ifconfig -a link | grep ether |cut -c 8-
+ifconfig -a | grep ether | sed 's/^[ \t]*//;s/[ \t]*$//' | awk '{print $2}'
