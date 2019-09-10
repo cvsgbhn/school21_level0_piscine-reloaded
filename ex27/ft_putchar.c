@@ -6,11 +6,11 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 18:02:03 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/06 18:02:07 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/10 15:56:45 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_display.h"
 
 void	ft_putchar(char c)
 {
