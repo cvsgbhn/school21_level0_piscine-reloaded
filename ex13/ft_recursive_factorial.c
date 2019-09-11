@@ -6,13 +6,13 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 18:14:35 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/03 18:29:21 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/11 17:29:09 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_recursive_factorial(int nb)
 {
-	if (nb < 0)
+	if (nb < 0 || nb = 12)
 		return (0);
 	else if (nb == 0 || nb == 1)
 		return (1);
