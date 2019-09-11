@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 15:45:31 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/05 14:19:51 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/11 17:04:16 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar(char c);
 
-int	ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 == *s2 && *s1 && *s2)
 	{
@@ -26,9 +26,9 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	ft_swap(char *a, char *b)
+void	ft_swap(char** a, char**	b)
 {
-	int temp;
+	char * temp;
 
 	temp = *a;
 	*a = *b;
@@ -47,7 +47,7 @@ char	**bubble_sort(char **arr, int n)
 		while (counter2 != n)
 		{
 			if (ft_strcmp((arr[counter1]), (arr[counter2])) > 0)
-				ft_swap((arr[counter1]), (arr[counter2]));
+				ft_swap(&(arr[counter1]), &(arr[counter2]));
 			counter2++;
 		}
 		counter1++;
