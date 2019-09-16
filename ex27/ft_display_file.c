@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 14:34:59 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/06 18:05:54 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/13 12:51:11 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int		main(int argc, char **argv)
 
 	if (argc > 2)
 	{
-		ft_putstr("Too many argumaents");
+		ft_putstr("Too many arguments.\n");
 		return (1);
 	}
 	if (argc < 2)
 	{
-		ft_putstr("File name missing");
+		ft_putstr("File name missing.\n");
 		return (1);
 	}
 	file_open = open(argv[1], O_RDONLY);

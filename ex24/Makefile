@@ -6,33 +6,35 @@
 #    By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 16:56:59 by vdanilo           #+#    #+#              #
-#    Updated: 2019/09/05 18:43:30 by vdanilo          ###   ########.fr        #
+#    Updated: 2019/09/06 16:08:54 by vdanilo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = "libft"
+NAME = libft.a
 
-INCLUDES = ./includes
+SRCDIR = ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strcmp.c ./srcs/ft_strlen.c ./srcs/ft_swap.c
 
-SOURCES = ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strcmp.c ./srcs/ft_strlen.c ./srcs/ft_swap.c
+HDRDIR = ./includes
 
-OBJECTS = ./ft_putchar.o ./ft_putstr.o ./ft_strcmp.o ./ft_strlen.o ./ft_swap.o
+FLAGS = -Wall -Wextra -Werror
 
-all: libft
+OS = ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
 
-libft: 
-	gcc -c -Wall -Wextra -Werror $(SOURCES) -I $(INCLUDES)
-	ar rcs libft.a $(OBJECTS)
+.PHONY: all clean fclean re
 
-.PHONY: clean fclean re
+all: $(NAME)
+
+$(NAME):
+	gcc $(FLAGS) -c $(SRCDIR) -I $(HDRDIR)
+	ar rc $(NAME) $(OS)
+	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJECTS)
+	/bin/rm -rf $(OS)
 
 fclean: clean
-	rm -f libft.a
+	/bin/rm -rf $(NAME)
 
-re: fclean libft
-
+re: fclean all
 
 

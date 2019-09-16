@@ -6,7 +6,7 @@
 /*   By: vdanilo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 15:45:31 by vdanilo           #+#    #+#             */
-/*   Updated: 2019/09/11 17:04:16 by vdanilo          ###   ########.fr       */
+/*   Updated: 2019/09/11 17:17:24 by vdanilo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int		ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	ft_swap(char** a, char**	b)
+void	ft_swap(char **a, char **b)
 {
-	char * temp;
+	char *temp;
 
 	temp = *a;
 	*a = *b;
